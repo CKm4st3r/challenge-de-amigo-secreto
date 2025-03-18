@@ -1,0 +1,211 @@
+:root {
+    --color-primary: #051366; /* Título Principal */
+    --color-secondary: #e2eaee; /* Fondo Página */
+    --color-tertiary: #7d9dbb; /* Bordes y delinear Secciones */
+    --color-button: #4A90E2; /* Fondo Botones */
+    --color-button-hover: #357ABD; /* Al pasar cursor sobre botones */
+    --color-text: #333333; /* Texto General */
+    --color-message: #0d10b1; /* Color para los mensajes */
+    --color-section-bg: #61c3f067; /* Fondo Secciones */
+    --color-restart-button: #FF9800; /* Boton Reinicio */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.header-banner {
+    width: 100%;
+    background-color: var(--color-section-bg);
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 2px solid var(--color-tertiary);
+}
+
+.main-title {
+    font-size: 36px;
+    font-family: 'Merriweather', serif;
+    font-weight: 900;
+    color: var(--color-primary);
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 10px;
+    background-color: var(--color-secondary);
+    border-radius: 10px;
+}
+
+.input-section, .message-section {
+    background-color: var(--color-section-bg);
+    border: 1px solid var(--color-tertiary);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 5px 0;
+    text-align: center;
+}
+
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.input-name {
+    width: 70%;
+    padding: 10px;
+    border: 2px solid var(--color-tertiary);
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+}
+
+.button-add {
+    background-color: var(--color-button);
+    color: var(--color-white);
+    border-radius: 0 5px 5px 0;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+.button-add:hover {
+    background-color: var(--color-button-hover);
+}
+
+.name-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 10px 0;
+    width: 100%;
+    padding-left: 0;
+}
+
+.name-list div {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: var(--color-text);
+}
+
+.result-list {
+    margin-top: 10px;
+    color: var(--color-primary);
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.button-draw {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    padding: 10px 20px;
+    color: var(--color-white);
+    background-color: var(--color-button);
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.button-draw:hover {
+    background-color: var(--color-button-hover);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px; /* Añadir margen inferior */
+}
+
+.button-remove {
+    margin-top: 10px;
+    color: var(--color-white);
+    background-color: var(--color-restart-button);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+.button-remove:hover {
+    background-color: #ec8c16;
+}
+
+#seccion-sorteo {
+    display: none; /* Ocultar inicialmente */
+}
+
+#mensaje {
+    font-weight: bold;
+    color: var(--color-message);
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    margin-bottom: 10px; /* Añadir margen inferior */
+}
+
+.animacion-revelar {
+    animation: revelar 1s ease-in-out;
+}
+
+@keyframes revelar {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

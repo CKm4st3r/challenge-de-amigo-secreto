@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El juego del Amigo Secreto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header-banner">
+        <h1 class="main-title">Amigo Secreto</h1>
+    </header>
+
+    <div class="image-container">
+        <img src="assets/tu-imagen.jpg" alt="Imagen amigo secreto">
+    </div>
+
+    <main class="main-content">
+        <!-- Sección para agregar participantes -->
+        <section id="seccion-participantes" class="input-section">
+            <h2 class="section-title">Ingrese Nombres de los Participantes</h2>
+            <div class="input-wrapper">
+                <input type="text" id="entrada-nombre" class="input-name" placeholder="Escribe un nombre sencillo">
+                <button id="boton-agregar" class="button-add" onclick="agregarParticipante()">Adicionar</button>
+            </div>
+            <div id="lista-participantes" class="name-list"></div>
+            <p id="contador-participantes">Participantes: 0</p>
+        </section>
+
+        <!-- Botones de acción -->
+        <div class="button-container">
+            <button id="boton-iniciar" class="button-draw" onclick="mostrarSeccionSorteo()">
+                <img src="assets/play_circle_outline.png" alt="Ícono para sortear">
+                Sortear Amigo
+            </button>
+        </div>
+
+        <!-- Sección para realizar el sorteo -->
+        <section id="seccion-sorteo" class="input-section" style="display: none;">
+            <h2 class="section-title">¿Quién va a sortear?</h2>
+            <div class="input-wrapper">
+                <input type="text" id="nombre-sorteador" class="input-name" placeholder="Escribe tu nombre">
+                <button id="boton-sortear" class="button-draw" onclick="sortearAmigoSecreto()">
+                    Sortear amigo secreto
+                </button>
+            </div>
+            <ul id="resultado-sorteo" class="result-list"></ul>
+        </section>
+
+        <!-- Área de mensajes -->
+        <div id="area-mensajes" class="message-section">
+            <p id="mensaje"></p>
+        </div>
+
+        <!-- Botón de reiniciar juego siempre visible -->
+        <button id="boton-reiniciar" class="button-remove" onclick="reiniciarJuego()">Reiniciar juego</button>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+</ht
